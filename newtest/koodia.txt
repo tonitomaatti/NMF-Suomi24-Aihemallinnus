@@ -1,0 +1,41 @@
+prune results:
+
+######### Osio: Laske huonoimmalla deltalla olevat pois
+delta = []
+for array in W:
+    delta.append(abs(array[0]-array[1]))
+
+
+
+
+
+
+print("Let's try pruning")
+
+cutoff = int(round(len(predictedTopics))/2) #lis‰‰ t‰h‰n jakaja takaisin
+print(cutoff)
+
+deltaIdxArray = np.array(delta).argsort()[::-1][:cutoff]
+for i in deltaIdxArray[:10]:
+    print(lemmaStrings[i])
+
+for i in deltaIdxArray[::-1][:10]:
+    print(lemmaStrings[i])
+
+sortedPredicted = []
+for x in np.array(predictedTopics)[deltaIdxArray]:
+    sortedPredicted.append(x)
+
+sortedReal = []
+for x in np.array(realTopics)[deltaIdxArray]:
+    sortedReal.append(x)
+
+hit, miss = 0, 0
+for i in range (0, cutoff):
+    if sortedPredicted[i] == sortedReal[i]:
+        hit += 1
+    else:
+        miss += 1
+
+print("Osumaprosentti pruned:")
+print(round(hit/(hit+miss), 2))

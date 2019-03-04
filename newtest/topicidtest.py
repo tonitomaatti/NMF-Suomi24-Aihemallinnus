@@ -10,13 +10,24 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import NMF
 from sklearn.feature_extraction import text
 
-#text_sect is 7
-#text_sub is 8
+import matplotlib.pyplot as plt
+
+import re
+
+def cleanhtml(raw_html):
+    cleanr = re.compile('<.*?>')
+    cleantext = re.sub(cleanr, '', raw_html)
+    return cleantext
+
+
+lemmas = 3
+text_sect = 13
+text_sub = 14
 
 inputFile = open("stopwords-fi.json", encoding='UTF-8')
 finnishStops = json.load(inputFile, encoding='UTF-8')
 
-moreStopWords = ["edes", "myös", "http", "www", "sä", "mä", "voida", "com", "esim"]
+moreStopWords = ["edes", "myös", "http", "www", "sä", "mä", "voida", "com", "esim", "/", "br" "," "."]
 
 customStops = text.ENGLISH_STOP_WORDS.union(finnishStops)
 customStops = customStops.union(moreStopWords)
@@ -35,8 +46,14 @@ for filename in os.listdir(path):
                 continue
             if not (row):
                 continue
-            lemmaStrings.append(row[3])
-            realTopics.append(row[7])
+                
+            noHTMLString = cleanhtml(row[lemmas])
+            noURLString = re.sub(r'http\S+', '', noHTMLString)
+            
+            ##if noURLString in lemmaStrings:
+            ##    continue
+            lemmaStrings.append(noURLString)
+            realTopics.append(row[text_sub])
 
 vectorizer = TfidfVectorizer(analyzer='word', stop_words = customStops, max_df = 0.9, min_df = 10)
 
@@ -80,3 +97,6 @@ for i, pTopic in enumerate(predictedTopics):
 
 print("Osumaprosentti:")
 print(round(hit/(hit+miss), 2))
+
+
+

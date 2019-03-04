@@ -1,0 +1,42 @@
+https://korp.csc.fi/cgi-bin/korp.cgi?command=query&defaultcontext=1+text&defaultwithin=text&show=sentence,paragraph,lemma&show_struct=text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=9&corpus=S24&cqp=[lemma+%3D+%22Ruotsi%22]&cqp1=[_.text_sub+%3D+%22Valuutat%22]&indent=2
+
+
+https://korp.csc.fi/cgi-bin/korp.cgi?command=query&defaultcontext=1+text&defaultwithin=text&show=lemma&show_struct=text_id,text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=9&corpus=S24&cqp=[_.text_sub+%3D+%22Valuutat%22]&cqp1=[lemma+%3D+%22Ruotsi%22]&indent=2
+
+
+
+https://korp.csc.fi/cgi-bin/korp.cgi?command=query&defaultcontext=1+text&defaultwithin=text&show=lemma&show_struct=text_id,text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=9&corpus=S24&cqp=[lemma+%3D+%22Ruotsi%22&_.text_sub+%3D+%22Valuutat%22]&indent=2
+
+
+
+https://korp.csc.fi/cgi-bin/korp.cgi?command=query&defaultcontext=1+text&defaultwithin=text&show=lemma&show_struct=text_id,text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=9&corpus=S24&cqp=[_.text_sub+%3D+%22Valuutat%22]&indent=2
+
+
+https://korp.csc.fi/cgi-bin/korp.cgi?command=query&defaultcontext=1+text&defaultwithin=text_sub&show=lemma&show_struct=text_id,text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=9&corpus=S24&cqp=[_.text_sub+%3D+%22Valuutat%22]&indent=2
+
+
+https://korp.csc.fi/cgi-bin/korp.cgi?command=query&defaultcontext=1+text&defaultwithin=text&show=lemma&show_struct=text_id,text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=100&corpus=S24&cqp=[_.text_sub+%3D+%22Valuutat%22]&sort=random&random_seed=552358&indent=2
+
+##Tyhjä random
+https://korp.csc.fi/cgi-bin/korp.cgi?command=query&defaultcontext=1+text&defaultwithin=text&show=lemma&show_struct=text_id,text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=100&corpus=S24&cqp=[]&sort=random&random_seed=552358&indent=2
+
+
+## DOWNLOAD
+## Valuutat 10000
+https://korp.csc.fi/cgi-bin/korp_download.cgi?command=query&defaultcontext=1+text&defaultwithin=text&show=lemma&show_struct=text_id,text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=10000&corpus=S24&cqp=[_.text_sub+%3D+%22Valuutat%22]&sort=random&random_seed=552358&indent=2
+
+## Ruoanlaitto
+https://korp.csc.fi/cgi-bin/korp_download.cgi?command=query&defaultcontext=1+text&defaultwithin=text&show=lemma&show_struct=text_id,text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=10000&corpus=S24&cqp=[_.text_sub+%3D+%22Ruoanlaitto%22]&sort=random&random_seed=552358&indent=2
+
+## Kengät
+https://korp.csc.fi/cgi-bin/korp_download.cgi?command=query&defaultcontext=1+text&defaultwithin=text&show=lemma&show_struct=text_id,text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=10000&corpus=S24&cqp=[_.text_sub+%3D+%22Kengät%22]&sort=random&random_seed=552358&indent=2
+
+## Transhumanismi - Ei tarpeeksi aineistoa
+https://korp.csc.fi/cgi-bin/korp_download.cgi?command=query&defaultcontext=1+text&defaultwithin=text&show=lemma&show_struct=text_id,text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=10000&corpus=S24&cqp=[_.text_sub+%3D+%22Transhumanismi%22]&sort=random&random_seed=552358&indent=2
+
+
+## Elektroniikka
+https://korp.csc.fi/cgi-bin/korp_download.cgi?command=query&defaultcontext=1+text&defaultwithin=text&show=lemma&show_struct=text_id,text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=50000&corpus=S24&cqp=[_.text_sub+%3D+%22Elektroniikka%22]&sort=random&random_seed=552358&indent=2
+
+
+
