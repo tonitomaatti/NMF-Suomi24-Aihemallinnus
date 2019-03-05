@@ -24,7 +24,7 @@ def cleanhtml(raw_html):
 #text_sect = 13
 #text_sub = 14
 
-inputFile = open("stopwords-fi.json", encoding='UTF-8')
+inputFile = open("stopwords-fi.json", encoding='UTF-8') #FROM https://github.com/stopwords-iso/stopwords-fi
 finnishStops = json.load(inputFile, encoding='UTF-8')
 
 moreStopWords = ["edes", "myös", "http", "www", "sä", "mä", "voida", "com", "esim", "/", "br" "," ".", "(", ")", "()", "()"]
