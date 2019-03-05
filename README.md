@@ -21,3 +21,5 @@ Aineistossa on mukana esimerkkitiedostoja, mutta materiaalista tulee nopeasti va
 itse json -muodossa käyttämällä [Korp Web Service APIa](https://www.kielipankki.fi/support/korpapi/). Latauskoodia.txt sisältää
 esimerkkejä sopivista latauspyynnöistä. Kohtaan "end=" annetaan haluttujen tekstien lukumäärä. Kohtaan "_.text_sub" taas annetaan
 haluttu aihealue.
+
+Jos haluaa enemmän muuttaa hakuehtoja, niin ohjelma tarvitsee datasta seuraavat kentät: structs.text_id, structs.text_sub, tokens.lemma
