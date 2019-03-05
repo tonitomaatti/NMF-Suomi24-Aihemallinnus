@@ -65,7 +65,6 @@ print("List of approved texts per topic: ")
 for topic in set(realTopics):
         print(topic+": "+str(realTopics.count(topic)))
 
-# , max_df = 0.9, min_df = 10
 vectorizer = TfidfVectorizer(analyzer='word', stop_words = customStops, max_df = 0.9, min_df = 10)
 
 numberOfTopics = len(set(realTopics))
@@ -157,9 +156,12 @@ eightRateArray = []
 eightHit = 0
 eightMiss = 0
 
+quantile = 0
+
 for i in range(len(predictedTopics)):
     if i in eightCutOffs:
-        print("eightRate: ")
+        quantile += 1
+        print("EightRate Quantile "+str(quantile)+":")
         print(round(eightHit/(eightHit+eightMiss), 2))
         eightRateArray.append(round(eightHit/(eightHit+eightMiss), 2))
         eightHit = 0
@@ -174,9 +176,11 @@ for i in range(len(predictedTopics)):
     movingHitRate.append(round(hit/(hit+miss), 2))
 
 plt.plot(movingHitRate)
+plt.xlabel("Cumulative hit rate sorted by ascending weight distribution variance")
 plt.show()
 
 plt.bar([1,2,3,4,5,6,7,8], eightRateArray, align='center')
+plt.xlabel("Hit rate by 8 quantiles, sorted by ascending weight distribution variance")
 plt.show()
 
 
