@@ -1,6 +1,6 @@
 # NMF-Suomi24-Aihemallinnus
 
-> Kehityksessä. Koodi muuttuu/parantuu tarpeen mukaan. Paremmat selityksen ja ohjeet myöhemmin.
+> Kehityksessä. Koodi muuttuu/parantuu tarpeen mukaan. Paremmat selitykset ja ohjeet myöhemmin.
 
 Ohjelma mallintaa Suomi24 -foorumin tekstejä [NMF](https://en.wikipedia.org/wiki/Non-negative_matrix_factorization) 
 -koneoppimisen tekniikalla. Ohjelma ryhmittelee tekstit sanaryppäisiin ja painoihin, jonka jälkeen käyttäjä tulkitsee 
