@@ -19,11 +19,6 @@ def cleanhtml(raw_html):
     cleantext = re.sub(cleanr, '', raw_html)
     return cleantext
 
-
-#lemmas = 3
-#text_sect = 13
-#text_sub = 14
-
 inputFile = open("stopwords-fi.json", encoding='UTF-8') #FROM https://github.com/stopwords-iso/stopwords-fi
 finnishStops = json.load(inputFile, encoding='UTF-8')
 
@@ -119,16 +114,16 @@ for i, pTopic in enumerate(predictedTopics):
             printedMisses += 1
         miss += 1
 
-print("Osumaprosentti:")
+print("Osumaprosentti: ", end = "")
 print(round(hit/(hit+miss), 2))
 
-print("X shape: ")
+print("X shape: ", end = ""),
 print(X.shape)
 
-print("W shape: ")
+print("W shape: ", end = ""),
 print(W.shape)
 
-print("H shape: ")
+print("H shape: ", end = ""),
 print(H.shape)
 
 varianceW = []
@@ -161,7 +156,7 @@ quantile = 0
 for i in range(len(predictedTopics)):
     if i in eightCutOffs:
         quantile += 1
-        print("EightRate Quantile "+str(quantile)+":")
+        print("EightRate Quantile "+str(quantile)+": ", end = ""),
         print(round(eightHit/(eightHit+eightMiss), 2))
         eightRateArray.append(round(eightHit/(eightHit+eightMiss), 2))
         eightHit = 0
