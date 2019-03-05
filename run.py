@@ -1,4 +1,4 @@
-#import csv
+
 import numpy as np
 import string
 import json
@@ -20,9 +20,9 @@ def cleanhtml(raw_html):
     return cleantext
 
 
-lemmas = 3
-text_sect = 13
-text_sub = 14
+#lemmas = 3
+#text_sect = 13
+#text_sub = 14
 
 inputFile = open("stopwords-fi.json", encoding='UTF-8')
 finnishStops = json.load(inputFile, encoding='UTF-8')
@@ -56,13 +56,9 @@ for filename in os.listdir(path):
                 rawString += token.get("lemma")
                 rawString += " "
             
-            
-                
             noHTMLString = cleanhtml(rawString)
             noURLString = re.sub(r'http\S+', '', noHTMLString)
             
-            #if noURLString in lemmaTexts:, Testattu text_id:llä
-            #    continue
             lemmaTexts.append(noURLString)
 
 print("List of approved texts per topic: ")
@@ -105,18 +101,19 @@ hit, miss = 0, 0
 
 printedHits = 0
 printedMisses = 0
+print("\n\n------------------")
 
 for i, pTopic in enumerate(predictedTopics):
     if pTopic == realTopics[i]:
         if printedHits < 3:
-            print("example of a hit: "+realTopics[i])
+            print("Example of a hit: "+realTopics[i])
             print(lemmaTexts[i])
             print("---------------------")
             printedHits += 1
         hit += 1
     else:
         if printedMisses < 3:
-            print("example of a miss: ")
+            print("Example of a miss: ")
             print("Real: " + realTopics[i]+", Predicted: "+pTopic )
             print(lemmaTexts[i])
             print("---------------------")
@@ -136,13 +133,9 @@ print("H shape: ")
 print(H.shape)
 
 varianceW = []
-cutoff = 0
-print("W array sums: ")
+
 for array in W:
     varianceW.append(np.var(array))
-    
-#cutoff = int(round(len(predictedTopics))/100)
-#[::-1][:cutoff] osa-arrayhyn
 
 deltaIdxArray = np.array(varianceW).argsort()
 
@@ -185,15 +178,5 @@ plt.show()
 
 plt.bar([1,2,3,4,5,6,7,8], eightRateArray, align='center')
 plt.show()
-
-# hit, miss = 0, 0
-# for i in range (0, cutoff):
-    # if sortedPredicted[i] == sortedReal[i]:
-        # hit += 1
-    # else:
-        # miss += 1
-
-# print("Osumaprosentti pruned:")
-# print(round(hit/(hit+miss), 2))
 
 
