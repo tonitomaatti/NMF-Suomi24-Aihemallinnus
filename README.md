@@ -5,7 +5,7 @@ Ohjelma mallintaa Suomi24 -foorumin tekstejä [NMF](https://en.wikipedia.org/wik
 sanaryppäille aihealueen käyttäen apuna oikeita mahdollisia aihealueita.
 
 Aihealueiden tulkinnan jälkeen ohjelma arvioi ryhmittelyn toimivuutta vertaamalla tekstin oikeaa aihealuetta siihen
-tulkittuun aihealueeseen jolle painotusmatriisi alkaa isoimman painon tekstin kohdalla.
+tulkittuun aihealueeseen jolle painotusmatriisi ankaa isoimman painon tekstin kohdalla.
 
 Vertauksesta annetaan osumaprosentti, joka on oikealle aihealueelle osuvien tekstien osuus kaikista teksteistä. Osumisprosentista tulostetaan myös kumulatiivinen osumaprosentti, lähtien heikoimmin tyypittyneestä tekstistä vahvimmin tyypittyneeseen (painojen
 varianssi).
