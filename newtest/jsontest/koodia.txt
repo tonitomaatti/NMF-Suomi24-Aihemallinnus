@@ -1,4 +1,0 @@
-## Kahden topicin delta, muuta toimimaan useammalla
-delta = []
-for array in W:
-    delta.append(abs(array[0]-array[1]))

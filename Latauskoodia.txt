@@ -1,0 +1,17 @@
+## DOWNLOAD
+## Valuutat
+https://korp.csc.fi/cgi-bin/korp_download.cgi?command=query&defaultcontext=1+text&defaultwithin=text&show=lemma&show_struct=text_id,text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=10000&corpus=S24&cqp=[_.text_sub+%3D+%22Valuutat%22]&sort=random&random_seed=552358&indent=2
+
+## Ruoanlaitto
+https://korp.csc.fi/cgi-bin/korp_download.cgi?command=query&defaultcontext=1+text&defaultwithin=text&show=lemma&show_struct=text_id,text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=10000&corpus=S24&cqp=[_.text_sub+%3D+%22Ruoanlaitto%22]&sort=random&random_seed=552358&indent=2
+
+## Kengät
+https://korp.csc.fi/cgi-bin/korp_download.cgi?command=query&defaultcontext=1+text&defaultwithin=text&show=lemma&show_struct=text_id,text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=10000&corpus=S24&cqp=[_.text_sub+%3D+%22Kengät%22]&sort=random&random_seed=552358&indent=2
+
+
+
+## Elektroniikka
+https://korp.csc.fi/cgi-bin/korp_download.cgi?command=query&defaultcontext=1+text&defaultwithin=text&show=lemma&show_struct=text_id,text_title,text_date,text_time,text_sect,text_sub,text_user,sentence_id,text_urlmsg,text_urlboard&start=0&end=10000&corpus=S24&cqp=[_.text_sub+%3D+%22Elektroniikka%22]&sort=random&random_seed=552358&indent=2
+
+
+
